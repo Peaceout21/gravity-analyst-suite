@@ -1,0 +1,9 @@
+[submodule "gravitic-macro"]
+	path = gravitic-macro
+	url = https://github.com/Peaceout21/gravitic-macro.git
+[submodule "gravitic-celestial"]
+	path = gravitic-celestial
+	url = https://github.com/Peaceout21/gravitic-celestial.git
+[submodule "gravitic-nebula"]
+	path = gravitic-nebula
+	url = https://github.com/Peaceout21/gravitic-nebula.git

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 🌌 Gravity Analyst Suite - Automated Setup Script
-# This script sets up all three repositories with virtual environments
+# This script initializes submodules and sets up virtual environments
 
 set -e  # Exit on error
 
@@ -10,6 +10,12 @@ cd "$SUITE_DIR"
 
 echo "🌌 Starting Gravity Analyst Suite Setup..."
 echo "================================================"
+
+# Initialize and update submodules
+echo ""
+echo "📦 Initializing git submodules..."
+git submodule update --init --recursive
+echo "✓ Submodules initialized"
 
 # Setup gravitic-macro
 echo ""

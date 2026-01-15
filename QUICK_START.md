@@ -1,11 +1,21 @@
 # ⚡ Quick Start Cheat Sheet
 
-## One-Time Setup
+## First Time Clone
 
 ```bash
-cd ~/Documents/gravity-analyst-suite
+# Clone with all submodules
+git clone --recurse-submodules https://github.com/Peaceout21/gravity-analyst-suite.git
+cd gravity-analyst-suite
+
+# Run setup
 chmod +x setup.sh
 ./setup.sh
+```
+
+## Update Submodules (Pull Latest Code)
+
+```bash
+git submodule update --remote --merge
 ```
 
 ## Daily Workflow

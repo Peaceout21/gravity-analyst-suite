@@ -54,6 +54,25 @@ The Gravity Analyst Suite consists of three integrated repositories:
 
 ---
 
+## 🔗 Repository Structure (Git Submodules)
+
+This master repo uses **git submodules** to link to the three component repositories. Each component is its own independent repo that can be developed separately.
+
+```
+gravity-analyst-suite/          # This repo (orchestration + docs)
+├── gravitic-macro/             # Submodule → github.com/Peaceout21/gravitic-macro
+├── gravitic-celestial/         # Submodule → github.com/Peaceout21/gravitic-celestial
+└── gravitic-nebula/            # Submodule → github.com/Peaceout21/gravitic-nebula
+```
+
+**Benefits:**
+- No code duplication
+- Each repo maintains its own history
+- Update components independently
+- Single clone gets everything
+
+---
+
 ## 🚀 Quick Start (The "Live" Workflow)
 
 ### Prerequisites
@@ -61,16 +80,18 @@ The Gravity Analyst Suite consists of three integrated repositories:
 - Git
 - API Keys (Gemini, Firecrawl)
 
-### Step 0: Initial Setup
+### Step 0: Clone & Initialize
 
 ```bash
-# Navigate to the suite directory
-cd ~/Documents/gravity-analyst-suite
+# Clone with submodules (recommended for new users)
+git clone --recurse-submodules https://github.com/Peaceout21/gravity-analyst-suite.git
+cd gravity-analyst-suite
 
-# Create virtual environments for each repo
-cd gravitic-macro && python3 -m venv macro-venv && cd ..
-cd gravitic-celestial && python3 -m venv celestial-venv && cd ..
-cd gravitic-nebula && python3 -m venv nebula-venv && cd ..
+# OR if you already cloned without submodules:
+git submodule update --init --recursive
+
+# Run automated setup (creates venvs + installs deps)
+./setup.sh
 ```
 
 ### Step 1: Initialize Macro Index (Polymarket Data)
