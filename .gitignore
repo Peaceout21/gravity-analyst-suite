@@ -1,0 +1,156 @@
+# ===========================
+# Gravity Analyst Suite
+# Master .gitignore
+# ===========================
+
+# -----------------
+# Environment & Secrets
+# -----------------
+.env
+.env.local
+.env.*.local
+*.env
+.envrc
+secrets.json
+credentials.json
+*.pem
+*.key
+api_keys.txt
+
+# -----------------
+# Python Virtual Environments
+# -----------------
+*-venv/
+venv/
+.venv/
+env/
+ENV/
+.python-version
+
+# -----------------
+# Python Artifacts
+# -----------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# -----------------
+# Databases (Local Data)
+# -----------------
+*.db
+*.sqlite
+*.sqlite3
+market_index.db
+nebula_signals.db
+
+# -----------------
+# IDE & Editor
+# -----------------
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# -----------------
+# OS Generated
+# -----------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.bak
+*.tmp
+*.temp
+
+# -----------------
+# Logs & Debug
+# -----------------
+*.log
+logs/
+log/
+debug.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# -----------------
+# Testing & Coverage
+# -----------------
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+.hypothesis/
+coverage.xml
+*.cover
+nosetests.xml
+
+# -----------------
+# Jupyter Notebooks
+# -----------------
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# -----------------
+# Docker
+# -----------------
+docker-compose.override.yml
+.docker/
+
+# -----------------
+# Build Outputs
+# -----------------
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+
+# -----------------
+# Streamlit
+# -----------------
+.streamlit/secrets.toml
+
+# -----------------
+# Node (if any JS tooling)
+# -----------------
+node_modules/
+npm-debug.log
+package-lock.json
+yarn.lock
+
+# -----------------
+# Cache
+# -----------------
+.cache/
+*.cache
+.mypy_cache/
+.ruff_cache/
